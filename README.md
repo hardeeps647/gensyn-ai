@@ -139,6 +139,7 @@ services:
 ```bash
 docker compose up --build -d && docker compose logs -f
 ```
+https://raw.githubusercontent.com/hardeeps647/gensyn-ai/main/421115435-56243405-85ca-41ae-8591-2e61631835da.png
 
 ---
 
