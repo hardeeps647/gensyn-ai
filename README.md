@@ -132,6 +132,10 @@ services:
 🔹 **GPU Users:** Leave `runtime: nvidia` intact.
 🔹 **CPU Users:** Remove the `runtime: nvidia` line.
 
+✅ **What Each Service Does:**
+**otel-collector:** Gathers telemetry data (metrics, traces).
+**swarm_node:** The core RL Swarm node connecting to the network.
+**fastapi:** The web UI dashboard for monitoring.
 
 ---
 
@@ -147,8 +151,23 @@ docker compose up --build -d && docker compose logs -f
 🔹 **VPS Users:** `http://<your-vps-ip>:8080/`
 🔹 **Local Users:** `http://localhost:8080` or `http://0.0.0.0:8080`
 
-
+![](https://raw.githubusercontent.com/hardeeps647/gensyn-ai/main/421120701-5be7755d-bcc9-41d8-ae03-37816002e014.png)
 ---
+
+## 🌐 Monitoring Your Node
+The dashboard displays collective swarm data, not individual node stats. To track your node:
+
+🔹 Check the swarm_node logs for your node’s unique ID (e.g., [F-d2042cff-01c9-4801-8ea7-1c1afc29c9b6]):
+
+![](https://raw.githubusercontent.com/hardeeps647/gensyn-ai/main/421121206-4bc5efa2-c9c3-4bf0-8dab-d21069c89a79.png)
+
+🔹 Search for this ID in the dashboard data to see your node’s contributions.
+
+**Note:** The dashboard monitors all peers together. The node ID in the logs is likely your identifier but I am keep experimenting to find out more about the node metrics!
+
+
 
 ### 🎉 You're all set!
 You’ve successfully deployed an RL Swarm node. 🚀 Have fun experimenting, and feel free to contribute to the project!
+
+
